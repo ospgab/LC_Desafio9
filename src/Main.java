@@ -33,6 +33,20 @@ Ou seja, dada uma cidade de origem, uma de destino e a quantidade de conexões, 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Travel travel = new Travel();
+
+        // POA BSB NAT GRU SSA SDU VCP REC
+        // O método deve receber duas entradas do tipo string e uma int: origem, destino, número de conexões
+        // O valor 0 corresponde à nenhuma viagem, só retorna true em casos travel.isReachable("BSB", "BSB", 0)
+
+        System.out.println(travel.isReachable("POA", "REC", 3));
+        System.out.println(travel.isReachable("VCP", "BSB", 6));
+        System.out.println(travel.isReachable("SSA", "NAT", 2));
+        System.out.println(travel.isReachable("GRU", "REC", 0));
+        System.out.println(travel.isReachable("POA", "REC", 1));
+        System.out.println(travel.isReachable("BSB", "BSB", 0));
+        // System.out.println(travel.isReachable("BSB", "CGH", 0)); // Esta linha resulta em uma exceção por não ter CGH
+        System.out.println(travel.isReachable("BSB", "VCP", 85));
+
     }
 }
